@@ -26,12 +26,12 @@ export default function Experience() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-semibold text-purple-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
             <Briefcase className="w-3.5 h-3.5" />
             <span>Professional Career History</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Demonstrated Impact in <span className="text-gradient-cyan-purple">Production Analytics</span>
+            Demonstrated Impact in <span className="text-gradient-orange">Production Analytics</span>
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
             Consolidating multi-source enterprise sales data, designing KPI frameworks, and empowering commercial sales teams with automated reporting systems.
@@ -51,7 +51,7 @@ export default function Experience() {
                   onClick={() => setSelectedExpId(exp.id)}
                   className={`w-full text-left p-4 sm:p-5 rounded-2xl transition-all cursor-pointer border ${
                     isSelected
-                      ? 'glass-panel border-cyan-500/50 shadow-lg shadow-cyan-500/10 translate-x-1'
+                      ? 'glass-panel border-orange-500/50 shadow-lg shadow-orange-500/10 translate-x-1'
                       : 'bg-slate-900/40 border-white/5 hover:border-white/10 hover:bg-slate-900/60'
                   }`}
                 >
@@ -59,7 +59,7 @@ export default function Experience() {
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <span className={`text-sm sm:text-base font-bold ${
-                          isSelected ? 'text-cyan-400' : 'text-white'
+                          isSelected ? 'text-orange-400' : 'text-white'
                         }`}>
                           {exp.role}
                         </span>
@@ -75,7 +75,7 @@ export default function Experience() {
                       </div>
                     </div>
                     <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${
-                      isSelected ? 'text-cyan-400 rotate-90 lg:rotate-0' : 'text-slate-600'
+                      isSelected ? 'text-orange-400 rotate-90 lg:rotate-0' : 'text-slate-600'
                     }`} />
                   </div>
 
@@ -102,7 +102,7 @@ export default function Experience() {
               {/* Header */}
               <div className="space-y-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between flex-wrap gap-2">
-                  <span className="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-white/5 text-cyan-300 border border-cyan-500/20">
+                  <span className="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-orange-500/10 text-orange-400 border border-orange-500/20">
                     {activeExp.type}
                   </span>
                   <span className="text-xs font-medium text-slate-400 flex items-center gap-1">
@@ -116,7 +116,7 @@ export default function Experience() {
                 </h3>
 
                 <div className="flex items-center gap-2 text-sm font-semibold text-slate-300">
-                  <span className="text-cyan-400">{activeExp.company}</span>
+                  <span className="text-orange-400">{activeExp.company}</span>
                   <span className="text-slate-500">•</span>
                   <span className="text-slate-400 font-normal">{activeExp.location}</span>
                 </div>
@@ -132,7 +132,7 @@ export default function Experience() {
                   {activeExp.kpis.map((kpi, idx) => (
                     <div key={idx} className="bg-slate-900/60 p-3 rounded-xl border border-white/5">
                       <div className="text-xs text-slate-400">{kpi.label}</div>
-                      <div className="text-sm font-bold text-cyan-300 mt-1">{kpi.value}</div>
+                      <div className="text-sm font-bold text-orange-400 mt-1">{kpi.value}</div>
                     </div>
                   ))}
                 </div>
@@ -141,12 +141,12 @@ export default function Experience() {
               {/* Responsibilities & Achievements Bullet Points */}
               <div className="space-y-3">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                  Core Responsibilities & Business Achievements:
+                  Core Responsibilities &amp; Business Achievements:
                 </h4>
                 <div className="space-y-2.5">
                   {activeExp.bullets.map((bullet, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-orange-400 mt-0.5 shrink-0" />
                       <span>{bullet}</span>
                     </div>
                   ))}
@@ -156,13 +156,13 @@ export default function Experience() {
               {/* Technologies & Analytical Tools Used */}
               <div className="pt-4 border-t border-white/10 space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
-                  Technologies, Methods & Frameworks Applied:
+                  Technologies, Methods &amp; Frameworks Applied:
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {activeExp.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-cyan-200"
+                      className="px-3 py-1 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-orange-300"
                     >
                       {tech}
                     </span>

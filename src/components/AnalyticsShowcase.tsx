@@ -154,20 +154,20 @@ export default function AnalyticsShowcase() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-semibold text-emerald-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
             <BarChart3 className="w-3.5 h-3.5" />
             <span>Interactive Live Analytics System</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Commercial Analytics <span className="text-gradient-cyan-purple">Control Center</span>
+            Commercial Analytics <span className="text-gradient-orange">Control Center</span>
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
             Experience an interactive demonstration of my target vs actual sales analytics architecture, DSM/RSM quota tracking, and multi-dimensional slice-and-dice intelligence.
           </p>
 
           {/* Synthetic Data Disclaimer Banner */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-950/40 border border-blue-500/20 text-xs text-blue-200">
-            <Info className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-orange-950/20 border border-orange-500/20 text-xs text-orange-200">
+            <Info className="w-3.5 h-3.5 text-orange-400 shrink-0" />
             <span>
               <strong>Note:</strong> Powered by clearly labeled synthetic telemetry showcasing data modeling and variance tracking principles.
             </span>
@@ -183,7 +183,7 @@ export default function AnalyticsShowcase() {
             {/* Filter Slicers */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                <Filter className="w-3.5 h-3.5 text-cyan-400" />
+                <Filter className="w-3.5 h-3.5 text-orange-400" />
                 <span>Filters:</span>
               </span>
 
@@ -192,7 +192,7 @@ export default function AnalyticsShowcase() {
                 aria-label="Filter by time period"
                 value={selectedQuarter}
                 onChange={(e) => setSelectedQuarter(e.target.value as Quarter)}
-                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-cyan-500 cursor-pointer"
+                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-orange-500 cursor-pointer"
               >
                 <option value="All">Period: All 2026</option>
                 <option value="Q1">Q1 (Jan - Mar)</option>
@@ -206,7 +206,7 @@ export default function AnalyticsShowcase() {
                 aria-label="Filter by product category"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value as Category)}
-                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-cyan-500 cursor-pointer"
+                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-orange-500 cursor-pointer"
               >
                 <option value="All">Category: All Business Units</option>
                 <option value="Pharmaceuticals">Pharmaceuticals</option>
@@ -220,7 +220,7 @@ export default function AnalyticsShowcase() {
                 aria-label="Filter by sales territory"
                 value={selectedTerritory}
                 onChange={(e) => setSelectedTerritory(e.target.value as Territory)}
-                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-cyan-500 cursor-pointer"
+                className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-white/10 text-white focus:outline-none focus:border-orange-500 cursor-pointer"
               >
                 <option value="All">Territory: All Regions</option>
                 <option value="Karachi">Karachi Metro (DSM South-A)</option>
@@ -244,7 +244,7 @@ export default function AnalyticsShowcase() {
 
               <button
                 onClick={handleExportCSV}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-sm transition-all cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 shadow-sm transition-all cursor-pointer"
                 title="Export filtered dataset to CSV"
               >
                 <Download className="w-3.5 h-3.5" />
@@ -261,7 +261,7 @@ export default function AnalyticsShowcase() {
             <div className="bg-slate-900/60 p-4 sm:p-5 rounded-2xl border border-white/5 space-y-1">
               <div className="flex items-center justify-between text-xs text-slate-400">
                 <span>Total Net Sales</span>
-                <DollarSign className="w-4 h-4 text-cyan-400" />
+                <DollarSign className="w-4 h-4 text-orange-400" />
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-white">
                 ${filteredMetrics.revenue.toLocaleString()}
@@ -297,13 +297,13 @@ export default function AnalyticsShowcase() {
             <div className="bg-slate-900/60 p-4 sm:p-5 rounded-2xl border border-white/5 space-y-1">
               <div className="flex items-center justify-between text-xs text-slate-400">
                 <span>Fulfilled Orders</span>
-                <ShoppingCart className="w-4 h-4 text-purple-400" />
+                <ShoppingCart className="w-4 h-4 text-amber-400" />
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-white">
                 {filteredMetrics.orders.toLocaleString()}
               </div>
               <div className="text-[11px] text-slate-400 pt-1">
-                Avg Order Value: <strong className="text-cyan-300">${filteredMetrics.aov}</strong>
+                Avg Order Value: <strong className="text-orange-300">${filteredMetrics.aov}</strong>
               </div>
             </div>
 
@@ -311,9 +311,9 @@ export default function AnalyticsShowcase() {
             <div className="bg-slate-900/60 p-4 sm:p-5 rounded-2xl border border-white/5 space-y-1">
               <div className="flex items-center justify-between text-xs text-slate-400">
                 <span>DSM/RSM Variance</span>
-                <TrendingUp className="w-4 h-4 text-cyan-400" />
+                <TrendingUp className="w-4 h-4 text-orange-400" />
               </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-cyan-400">
+              <div className="text-2xl sm:text-3xl font-extrabold text-orange-400">
                 {filteredMetrics.variance >= 0 ? 'Surplus' : 'Deficit'}
               </div>
               <div className="text-[11px] text-slate-400 pt-1 flex items-center gap-1">

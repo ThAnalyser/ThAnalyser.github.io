@@ -23,15 +23,15 @@ export default function About() {
       title: "Target vs Actual Governance",
       desc: "Architecting rigorous variance tracking models that identify territory deviations, calculate exact achievement %, and evaluate DSM and RSM field force productivity.",
       icon: Target,
-      color: "text-cyan-400",
-      border: "border-cyan-500/20"
+      color: "text-orange-400",
+      border: "border-orange-500/20"
     },
     {
       title: "Automated ETL & Cleansing",
       desc: "Replacing fragile manual spreadsheets with automated Power Query and Python pipelines, enforcing multi-source validation checkpoints that eliminate reporting discrepancies.",
       icon: Layers,
-      color: "text-purple-400",
-      border: "border-purple-500/20"
+      color: "text-amber-400",
+      border: "border-amber-500/20"
     },
     {
       title: "Executive BI Storytelling",
@@ -44,23 +44,23 @@ export default function About() {
       title: "Predictive & Retention Modeling",
       desc: "Applying statistical inference, RFM customer segmentation, cohort decay matrices, and machine learning (scikit-learn, XGBoost) to forecast churn and maximize Customer Lifetime Value.",
       icon: Cpu,
-      color: "text-amber-400",
-      border: "border-amber-500/20"
+      color: "text-orange-300",
+      border: "border-orange-500/20"
     }
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden bg-[#0a0b12]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-semibold text-cyan-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Professional Profile & Methodology</span>
+            <span>Professional Profile &amp; Methodology</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Bridging Operational Realities with <span className="text-gradient-cyan-purple">Analytical Precision</span>
+            Bridging Operational Realities with <span className="text-gradient-orange">Analytical Precision</span>
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
             From granular pharmacy transaction rows to high-level executive boardrooms, I transform complex, multi-source data into reliable levers for business growth.
@@ -76,29 +76,29 @@ export default function About() {
             {/* The Story & Analytical Philosophy */}
             <div className="glass-panel rounded-2xl p-6 sm:p-8 space-y-4">
               <h3 className="text-xl font-bold text-white flex items-center gap-2.5">
-                <Briefcase className="w-5 h-5 text-cyan-400" />
+                <Briefcase className="w-5 h-5 text-orange-400" />
                 <span>My Journey in Data Analytics</span>
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                As a Sales & Data Analyst currently at <strong className="text-white">Maxitech Pharma (Pvt.) Ltd.</strong>, I consolidate daily sales datasets spanning diverse distribution channels, cities, and product categories. My work focuses on giving leadership immediate visibility into <strong className="text-cyan-300">sales targets vs actual achievements</strong>, tracking DSM (District Sales Manager) and RSM (Regional Sales Manager) performance, and spotting territorial revenue gaps before they impact quarterly targets.
+                As a Sales &amp; Data Analyst currently at <strong className="text-white">Maxitech Pharma (Pvt.) Ltd.</strong>, I consolidate daily sales datasets spanning diverse distribution channels, cities, and product categories. My work focuses on giving leadership immediate visibility into <strong className="text-orange-300">sales targets vs actual achievements</strong>, tracking DSM (District Sales Manager) and RSM (Regional Sales Manager) performance, and spotting territorial revenue gaps before they impact quarterly targets.
               </p>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                My approach to business intelligence is grounded in empirical validation: I do not believe in superficial dashboards built on fragile foundations. Whether authoring optimized <strong className="text-purple-300">DAX measures</strong> in Power BI, writing multi-step <strong className="text-purple-300">SQL CTEs</strong>, or building automated <strong className="text-purple-300">Power Query ETL workflows</strong>, I ensure that every number reported to management is clean, reproducible, and tied directly to commercial strategy.
+                My approach to business intelligence is grounded in empirical validation: I do not believe in superficial dashboards built on fragile foundations. Whether authoring optimized <strong className="text-amber-300">DAX measures</strong> in Power BI, writing multi-step <strong className="text-orange-300">SQL CTEs</strong>, or building automated <strong className="text-orange-300">Power Query ETL workflows</strong>, I ensure that every number reported to management is clean, reproducible, and tied directly to commercial strategy.
               </p>
             </div>
 
             {/* Academic Foundation Card */}
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-cyan-500 space-y-3">
+            <div className="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-orange-500 space-y-3">
               <div className="flex items-start justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
-                    <GraduationCap className="w-5 h-5 text-cyan-400" />
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center">
+                    <GraduationCap className="w-5 h-5 text-orange-400" />
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-white">
                       {PERSONAL_INFO.education.degree}
                     </h4>
-                    <p className="text-xs text-cyan-300 font-medium">
+                    <p className="text-xs text-orange-300 font-medium">
                       {PERSONAL_INFO.education.institution}
                     </p>
                   </div>
@@ -138,18 +138,22 @@ export default function About() {
           {/* Right Column: Professional Dossier Card */}
           <div className="lg:col-span-5 space-y-6">
             <div className="glass-panel rounded-2xl p-6 sm:p-7 space-y-6 border border-white/10 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl pointer-events-none" />
 
-              {/* Monogram / Header */}
+              {/* Photo & Header */}
               <div className="flex items-center gap-4 pb-4 border-b border-white/10">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 p-[2px] shadow-lg shadow-cyan-500/30">
-                  <div className="w-full h-full bg-[#0a0f1d] rounded-[14px] flex items-center justify-center font-black text-xl text-cyan-400">
-                    HR
+                <div className="w-16 h-16 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 p-[2px] shadow-lg shadow-orange-500/30">
+                  <div className="w-full h-full bg-[#0a0f1d] rounded-[14px] overflow-hidden flex items-center justify-center">
+                    <img
+                      src="/assets/hanzala_portrait.jpg"
+                      alt={PERSONAL_INFO.fullName}
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{PERSONAL_INFO.fullName}</h3>
-                  <p className="text-xs text-cyan-400 font-semibold">{PERSONAL_INFO.title}</p>
+                  <p className="text-xs text-orange-400 font-semibold">{PERSONAL_INFO.title}</p>
                   <p className="text-xs text-slate-400 mt-0.5 flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-slate-500" />
                     <span>{PERSONAL_INFO.location}</span>
@@ -169,11 +173,11 @@ export default function About() {
                 </div>
                 <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                   <span className="text-slate-400">Primary Core BI Stack</span>
-                  <span className="font-semibold text-cyan-300 text-right">Power BI, Advanced Excel, SQL, DAX</span>
+                  <span className="font-semibold text-orange-300 text-right">Power BI, Advanced Excel, SQL, DAX</span>
                 </div>
                 <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Programming & ML</span>
-                  <span className="font-semibold text-purple-300 text-right">Python, Pandas, scikit-learn, Streamlit</span>
+                  <span className="text-slate-400">Programming &amp; ML</span>
+                  <span className="font-semibold text-amber-300 text-right">Python, Pandas, scikit-learn, Streamlit</span>
                 </div>
                 <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                   <span className="text-slate-400">Key Certifications</span>
@@ -181,7 +185,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                   <span className="text-slate-400">Work Authorization</span>
-                  <span className="font-semibold text-white text-right">Karachi & Remote Worldwide</span>
+                  <span className="font-semibold text-white text-right">Karachi &amp; Remote Worldwide</span>
                 </div>
               </div>
 
@@ -199,7 +203,7 @@ export default function About() {
                   'Machine learning churn prediction & RFM segmentation'
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-400 mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -210,10 +214,10 @@ export default function About() {
                 <a
                   href="/Hanzala_Raja_Resume.pdf"
                   download="Hanzala_Raja_Resume.pdf"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-md shadow-cyan-500/20 transition-all cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 shadow-md shadow-orange-500/20 transition-all cursor-pointer"
                 >
                   <FileText className="w-4 h-4" />
-                  <span>Download Verified Resume</span>
+                  <span>Download Verified Resume (PDF)</span>
                 </a>
               </div>
 

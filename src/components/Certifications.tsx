@@ -30,12 +30,12 @@ export default function Certifications() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-semibold text-purple-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
             <Award className="w-3.5 h-3.5" />
-            <span>Academic & Professional Credentials</span>
+            <span>Academic &amp; Professional Credentials</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Verified Certifications & <span className="text-gradient-cyan-purple">Academic Degree</span>
+            Verified Certifications &amp; <span className="text-gradient-orange">Academic Degree</span>
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
             All credentials are fully backed by official issuing authorities, including Google, Microsoft, UC Davis, IBM, Deloitte, and Sindh Madarsatul Islam University.
@@ -43,14 +43,14 @@ export default function Certifications() {
         </div>
 
         {/* Education Hero Card */}
-        <div className="mb-12 glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-cyan-500 space-y-4">
+        <div className="mb-12 glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-orange-500 space-y-4">
           <div className="flex items-start justify-between flex-wrap gap-4">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
-                <GraduationCap className="w-7 h-7 text-cyan-400" />
+              <div className="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center">
+                <GraduationCap className="w-7 h-7 text-orange-400" />
               </div>
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-400">
                   University Degree
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-white mt-0.5">
@@ -63,7 +63,7 @@ export default function Certifications() {
             </div>
 
             <div className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-slate-300">
-              <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+              <Calendar className="w-3.5 h-3.5 text-orange-400" />
               <span>Conferred: {PERSONAL_INFO.education.gradDate}</span>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Certifications() {
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-orange-400 hover:text-orange-300 transition-colors"
                   >
                     <span>Verify</span>
                     <ExternalLink className="w-3 h-3" />

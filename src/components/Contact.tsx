@@ -85,12 +85,12 @@ export default function Contact() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-semibold text-cyan-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
             <Mail className="w-3.5 h-3.5" />
-            <span>Direct Inquiries & Hiring</span>
+            <span>Direct Inquiries &amp; Hiring</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Let&apos;s Connect and <span className="text-gradient-cyan-purple">Turn Data Into Value</span>
+            Let&apos;s Connect and <span className="text-gradient-orange">Turn Data Into Value</span>
           </h2>
           <p className="text-slate-300 text-base leading-relaxed">
             Whether you are seeking a full-time Data Analyst, looking to optimize commercial sales dashboards, or interested in collaborating on BI solutions.
@@ -117,7 +117,7 @@ export default function Contact() {
                 <div className="flex items-center justify-between gap-2">
                   <a 
                     href={`mailto:${PERSONAL_INFO.email}`} 
-                    className="text-sm sm:text-base font-bold text-cyan-400 hover:underline truncate"
+                    className="text-sm sm:text-base font-bold text-orange-400 hover:underline truncate"
                   >
                     {PERSONAL_INFO.email}
                   </a>
@@ -169,9 +169,9 @@ export default function Contact() {
                     href={PERSONAL_INFO.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl glass-panel text-xs font-bold text-slate-200 hover:text-cyan-400 hover:border-cyan-500/40 transition-all"
+                    className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl glass-panel text-xs font-bold text-slate-200 hover:text-orange-400 hover:border-orange-500/40 transition-all"
                   >
-                    <LinkedinIcon className="w-4 h-4 text-cyan-400" />
+                    <LinkedinIcon className="w-4 h-4 text-orange-400" />
                     <span>LinkedIn</span>
                     <ExternalLink className="w-3 h-3 text-slate-500" />
                   </a>
@@ -180,9 +180,9 @@ export default function Contact() {
                     href={PERSONAL_INFO.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl glass-panel text-xs font-bold text-slate-200 hover:text-purple-400 hover:border-purple-500/40 transition-all"
+                    className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl glass-panel text-xs font-bold text-slate-200 hover:text-orange-400 hover:border-orange-500/40 transition-all"
                   >
-                    <GithubIcon className="w-4 h-4 text-purple-400" />
+                    <GithubIcon className="w-4 h-4 text-orange-400" />
                     <span>GitHub</span>
                     <ExternalLink className="w-3 h-3 text-slate-500" />
                   </a>
@@ -197,7 +197,7 @@ export default function Contact() {
             <div className="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 border border-white/10 shadow-2xl">
               <div>
                 <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-cyan-400" />
+                  <MessageSquare className="w-5 h-5 text-orange-400" />
                   <span>Send a Direct Message</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
@@ -218,7 +218,7 @@ export default function Contact() {
                       placeholder="e.g. John Doe / Hiring Manager"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition-colors"
                     />
                   </div>
 
@@ -233,7 +233,7 @@ export default function Contact() {
                       placeholder="e.g. john@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition-colors"
                     />
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export default function Contact() {
                     placeholder="e.g. Opportunity: Senior Data Analyst / Power BI Consulting"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition-colors"
                   />
                 </div>
 
@@ -263,7 +263,7 @@ export default function Contact() {
                     placeholder="Describe your inquiry, project requirements, or role details..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-900/70 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition-colors resize-none"
                   />
                 </div>
 
@@ -287,7 +287,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 shadow-lg shadow-cyan-500/20 transition-all cursor-pointer disabled:opacity-60"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 shadow-lg shadow-orange-500/20 transition-all cursor-pointer disabled:opacity-60"
                 >
                   {status === 'submitting' ? (
                     <span>Dispatching Message...</span>

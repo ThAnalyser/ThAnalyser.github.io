@@ -66,6 +66,8 @@ export interface Certification {
 export const PERSONAL_INFO = {
   name: "Hanzala Raja",
   fullName: "Raja Hanzala Muavia",
+  avatarUrl: "/assets/hanzala_portrait.jpg",
+  cutoutUrl: "/assets/hanzala_cutout.png",
   title: "Sales & Data Analyst",
   headline: "Turning Data Into Insights. Insights Into Impact.",
   bio: "I'm a Data Analyst passionate about transforming complex datasets into meaningful business insights through data analysis, visualization, and problem-solving.",

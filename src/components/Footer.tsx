@@ -37,15 +37,19 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-3 md:col-span-2">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-white text-xs">
-                HR
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-[1px]">
+                <img
+                  src="/assets/hanzala_portrait.jpg"
+                  alt="Hanzala Raja"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <span className="font-bold text-white text-base">
                 {PERSONAL_INFO.name}
               </span>
             </div>
             <p className="text-slate-400 max-w-md leading-relaxed">
-              Sales & Data Analyst specializing in Power BI, Advanced Excel, SQL, and Python. Turning complex multi-source sales telemetry into clear, executive-grade decision intelligence.
+              Sales &amp; Data Analyst specializing in Power BI, Advanced Excel, SQL, and Python. Turning complex multi-source sales telemetry into clear, executive-grade decision intelligence.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
@@ -53,7 +57,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-cyan-400 transition-all"
+                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-orange-400 transition-all"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -62,7 +66,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-purple-400 transition-all"
+                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-orange-400 transition-all"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
@@ -83,22 +87,25 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="hover:text-cyan-400 transition-colors">About Me</a>
+                <a href="#about" className="hover:text-orange-400 transition-colors">About Me</a>
               </li>
               <li>
-                <a href="#experience" className="hover:text-cyan-400 transition-colors">Professional Experience</a>
+                <a href="#experience" className="hover:text-orange-400 transition-colors">Professional Experience</a>
               </li>
               <li>
-                <a href="#skills" className="hover:text-cyan-400 transition-colors">Technical Skills</a>
+                <a href="#skills" className="hover:text-orange-400 transition-colors">Technical Skills</a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-cyan-400 transition-colors">Featured Projects</a>
+                <a href="#projects" className="hover:text-orange-400 transition-colors">Featured Projects</a>
               </li>
               <li>
-                <a href="#showcase" className="hover:text-cyan-400 transition-colors">Interactive Dashboard</a>
+                <a href="#ai-lab" className="hover:text-orange-400 transition-colors">AI &amp; ML Lab ⚡</a>
               </li>
               <li>
-                <a href="#certifications" className="hover:text-cyan-400 transition-colors">Certifications & Education</a>
+                <a href="#showcase" className="hover:text-orange-400 transition-colors">Interactive Dashboard</a>
+              </li>
+              <li>
+                <a href="#certifications" className="hover:text-orange-400 transition-colors">Certifications &amp; Degree</a>
               </li>
             </ul>
           </div>
@@ -112,9 +119,9 @@ export default function Footer() {
               <a
                 href="/Hanzala_Raja_Resume.pdf"
                 download="Hanzala_Raja_Resume.pdf"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 border border-white/10 hover:border-cyan-500/40 transition-all"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 border border-white/10 hover:border-orange-500/40 transition-all"
               >
-                <Download className="w-3.5 h-3.5 text-cyan-400" />
+                <Download className="w-3.5 h-3.5 text-orange-400" />
                 <span>Download Resume (PDF)</span>
               </a>
               <p className="text-[11px] text-slate-500">
