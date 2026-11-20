@@ -23,13 +23,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (saved === 'light' || saved === 'dark') {
       setTheme(saved);
       if (saved === 'light') {
+        document.documentElement.classList.remove('dark');
         document.documentElement.classList.add('light');
       } else {
+        document.documentElement.classList.add('dark');
         document.documentElement.classList.remove('light');
       }
     } else {
-      // Default to dark (Deep Navy / Midnight Blue)
+      // Default to dark
       setTheme('dark');
+      document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     }
     setMounted(true);
@@ -40,8 +43,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(next);
     localStorage.setItem('hanzala-portfolio-theme', next);
     if (next === 'light') {
+      document.documentElement.classList.remove('dark');
       document.documentElement.classList.add('light');
     } else {
+      document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     }
   };

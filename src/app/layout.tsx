@@ -67,7 +67,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className={`${inter.variable} antialiased min-h-screen flex flex-col bg-[#070b14] text-slate-100 selection:bg-cyan-500/20 selection:text-cyan-300`}>
+      <body className={`${inter.variable} antialiased min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-[#07080b] dark:text-slate-100 selection:bg-orange-500/20 selection:text-orange-600 dark:selection:text-orange-400`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

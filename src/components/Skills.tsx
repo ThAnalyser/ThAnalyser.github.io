@@ -52,14 +52,14 @@ export default function Skills() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-600 dark:text-orange-400 tracking-wider uppercase">
             <Cpu className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Specialized Toolkit for <span className="text-gradient-orange">Data Intelligence</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
+          <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
             Transparent, production-tested competencies categorized by functional domain. Explicitly separated by production proficiency without arbitrary percentage ratings.
           </p>
         </div>
@@ -73,8 +73,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('all')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'all'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40 shadow-sm'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40 shadow-sm'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               All Capabilities
@@ -83,8 +83,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('Analysis')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'Analysis'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               Data Analysis
@@ -93,8 +93,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('Visualization')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'Visualization'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               Power BI &amp; Viz
@@ -103,8 +103,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('Databases')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'Databases'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               SQL &amp; Databases
@@ -113,8 +113,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('Excel')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'Excel'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               Advanced Excel
@@ -123,8 +123,8 @@ export default function Skills() {
               onClick={() => setActiveCategory('Python')}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                 activeCategory === 'Python'
-                  ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40'
-                  : 'glass-panel text-slate-400 hover:text-white'
+                  ? 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/40'
+                  : 'glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               Python &amp; ML
@@ -133,13 +133,13 @@ export default function Skills() {
 
           {/* Quick Search */}
           <div className="relative w-full md:w-64">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-500 dark:text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search skills (e.g. DAX, CTE, Power Query)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl text-xs bg-slate-900/60 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500/50 transition-colors"
+              className="w-full pl-9 pr-4 py-2 rounded-xl text-xs bg-white dark:bg-slate-900/60 border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
             />
           </div>
 
@@ -153,20 +153,20 @@ export default function Skills() {
             return (
               <div 
                 key={catIdx}
-                className="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 border border-white/10"
+                className="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 border border-slate-200 dark:border-white/10"
               >
                 {/* Category Header */}
-                <div className="flex items-center justify-between flex-wrap gap-4 pb-4 border-b border-white/10">
+                <div className="flex items-center justify-between flex-wrap gap-4 pb-4 border-b border-slate-200 dark:border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
+                    <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{category.category}</h3>
-                      <p className="text-xs text-slate-400">{category.description}</p>
+                      <h3 className="text-lg font-bold text-slate-900 dark:text-white">{category.category}</h3>
+                      <p className="text-xs text-slate-600 dark:text-slate-400">{category.description}</p>
                     </div>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300">
                     {category.skills.length} Competencies
                   </span>
                 </div>
@@ -175,28 +175,28 @@ export default function Skills() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {category.skills.map((skill, sIdx) => {
                     const levelColors: Record<string, string> = {
-                      Advanced: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
-                      Proficient: 'text-orange-400 bg-orange-500/10 border-orange-500/30',
-                      Developing: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
+                      Advanced: 'text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+                      Proficient: 'text-orange-700 dark:text-orange-400 bg-orange-500/10 border-orange-500/30',
+                      Developing: 'text-amber-700 dark:text-amber-400 bg-amber-500/10 border-amber-500/30',
                     };
 
                     return (
                       <div
                         key={sIdx}
-                        className="bg-slate-900/50 p-4 rounded-xl border border-white/5 hover:border-orange-500/30 hover:bg-slate-900/80 transition-all space-y-2 group"
+                        className="bg-white/80 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5 hover:border-orange-500/30 hover:bg-slate-50 dark:hover:bg-slate-900/80 transition-all space-y-2 group shadow-sm"
                       >
                         <div className="flex items-start justify-between gap-2">
-                          <h4 className="text-sm font-bold text-white group-hover:text-orange-300 transition-colors">
+                          <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-300 transition-colors">
                             {skill.name}
                           </h4>
                           <span className={`px-2 py-0.5 rounded text-[10px] font-bold border uppercase tracking-wider ${
-                            levelColors[skill.level] || 'text-slate-400'
+                            levelColors[skill.level] || 'text-slate-500'
                           }`}>
                             {skill.level}
                           </span>
                         </div>
 
-                        <p className="text-xs text-slate-300 leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                           {skill.description}
                         </p>
 

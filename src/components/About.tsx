@@ -50,19 +50,19 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-[#0a0b12]/50">
+    <section id="about" className="py-24 relative overflow-hidden bg-slate-100/60 dark:bg-[#0a0b12]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-400 tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-xs font-semibold text-orange-600 dark:text-orange-400 tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Professional Profile &amp; Methodology</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Bridging Operational Realities with <span className="text-gradient-orange">Analytical Precision</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
+          <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
             From granular pharmacy transaction rows to high-level executive boardrooms, I transform complex, multi-source data into reliable levers for business growth.
           </p>
         </div>
@@ -74,40 +74,40 @@ export default function About() {
           <div className="lg:col-span-7 space-y-6">
             
             {/* The Story & Analytical Philosophy */}
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 space-y-4">
-              <h3 className="text-xl font-bold text-white flex items-center gap-2.5">
-                <Briefcase className="w-5 h-5 text-orange-400" />
+            <div className="glass-panel rounded-2xl p-6 sm:p-8 space-y-4 border border-slate-200 dark:border-white/10">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2.5">
+                <Briefcase className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                 <span>My Journey in Data Analytics</span>
               </h3>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                As a Sales &amp; Data Analyst currently at <strong className="text-white">Maxitech Pharma (Pvt.) Ltd.</strong>, I consolidate daily sales datasets spanning diverse distribution channels, cities, and product categories. My work focuses on giving leadership immediate visibility into <strong className="text-orange-300">sales targets vs actual achievements</strong>, tracking DSM (District Sales Manager) and RSM (Regional Sales Manager) performance, and spotting territorial revenue gaps before they impact quarterly targets.
+              <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                As a Sales &amp; Data Analyst currently at <strong className="text-slate-900 dark:text-white">Maxitech Pharma (Pvt.) Ltd.</strong>, I consolidate daily sales datasets spanning diverse distribution channels, cities, and product categories. My work focuses on giving leadership immediate visibility into <strong className="text-orange-600 dark:text-orange-300">sales targets vs actual achievements</strong>, tracking DSM (District Sales Manager) and RSM (Regional Sales Manager) performance, and spotting territorial revenue gaps before they impact quarterly targets.
               </p>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                My approach to business intelligence is grounded in empirical validation: I do not believe in superficial dashboards built on fragile foundations. Whether authoring optimized <strong className="text-amber-300">DAX measures</strong> in Power BI, writing multi-step <strong className="text-orange-300">SQL CTEs</strong>, or building automated <strong className="text-orange-300">Power Query ETL workflows</strong>, I ensure that every number reported to management is clean, reproducible, and tied directly to commercial strategy.
+              <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                My approach to business intelligence is grounded in empirical validation: I do not believe in superficial dashboards built on fragile foundations. Whether authoring optimized <strong className="text-amber-600 dark:text-amber-300">DAX measures</strong> in Power BI, writing multi-step <strong className="text-orange-600 dark:text-orange-300">SQL CTEs</strong>, or building automated <strong className="text-orange-600 dark:text-orange-300">Power Query ETL workflows</strong>, I ensure that every number reported to management is clean, reproducible, and tied directly to commercial strategy.
               </p>
             </div>
 
             {/* Academic Foundation Card */}
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-orange-500 space-y-3">
+            <div className="glass-panel rounded-2xl p-6 sm:p-8 border-l-4 border-l-orange-500 border border-slate-200 dark:border-white/10 space-y-3">
               <div className="flex items-start justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center">
-                    <GraduationCap className="w-5 h-5 text-orange-400" />
+                    <GraduationCap className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-white">
+                    <h4 className="text-base font-bold text-slate-900 dark:text-white">
                       {PERSONAL_INFO.education.degree}
                     </h4>
-                    <p className="text-xs text-orange-300 font-medium">
+                    <p className="text-xs text-orange-600 dark:text-orange-300 font-medium">
                       {PERSONAL_INFO.education.institution}
                     </p>
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-white/5 text-slate-300 border border-white/10">
+                <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-200/70 dark:bg-white/5 text-slate-800 dark:text-slate-300 border border-slate-300 dark:border-white/10">
                   Graduated {PERSONAL_INFO.education.gradDate}
                 </span>
               </div>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed pt-2">
+              <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed pt-2">
                 {PERSONAL_INFO.education.details} Built end-to-end analytical solutions, completed hands-on capstone research, and conducted computer vision deep learning projects on the HAM10000 dataset.
               </p>
             </div>
@@ -119,13 +119,13 @@ export default function About() {
                 return (
                   <div 
                     key={i} 
-                    className={`glass-panel p-5 rounded-xl border ${p.border} space-y-2`}
+                    className={`glass-panel p-5 rounded-xl border border-slate-200 dark:${p.border} space-y-2`}
                   >
                     <div className="flex items-center gap-2.5">
                       <IconComponent className={`w-5 h-5 ${p.color}`} />
-                      <h4 className="text-sm font-bold text-white">{p.title}</h4>
+                      <h4 className="text-sm font-bold text-slate-900 dark:text-white">{p.title}</h4>
                     </div>
-                    <p className="text-xs text-slate-300 leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       {p.desc}
                     </p>
                   </div>
@@ -137,13 +137,13 @@ export default function About() {
 
           {/* Right Column: Professional Dossier Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel rounded-2xl p-6 sm:p-7 space-y-6 border border-white/10 shadow-2xl relative overflow-hidden">
+            <div className="glass-panel rounded-2xl p-6 sm:p-7 space-y-6 border border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl pointer-events-none" />
 
               {/* Photo & Header */}
-              <div className="flex items-center gap-4 pb-4 border-b border-white/10">
+              <div className="flex items-center gap-4 pb-4 border-b border-slate-200 dark:border-white/10">
                 <div className="w-16 h-16 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 p-[2px] shadow-lg shadow-orange-500/30">
-                  <div className="w-full h-full bg-[#0a0f1d] rounded-[14px] overflow-hidden flex items-center justify-center">
+                  <div className="w-full h-full bg-slate-100 dark:bg-[#0a0f1d] rounded-[14px] overflow-hidden flex items-center justify-center">
                     <img
                       src="/assets/hanzala_portrait.jpg"
                       alt={PERSONAL_INFO.fullName}
@@ -152,9 +152,9 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white">{PERSONAL_INFO.fullName}</h3>
-                  <p className="text-xs text-orange-400 font-semibold">{PERSONAL_INFO.title}</p>
-                  <p className="text-xs text-slate-400 mt-0.5 flex items-center gap-1">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">{PERSONAL_INFO.fullName}</h3>
+                  <p className="text-xs text-orange-600 dark:text-orange-400 font-semibold">{PERSONAL_INFO.title}</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-slate-500" />
                     <span>{PERSONAL_INFO.location}</span>
                   </p>
@@ -163,35 +163,35 @@ export default function About() {
 
               {/* Dossier Details List */}
               <div className="space-y-3.5 text-xs">
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Current Role</span>
-                  <span className="font-semibold text-white text-right">Sales Analyst @ Maxitech Pharma</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Current Role</span>
+                  <span className="font-semibold text-slate-900 dark:text-white text-right">Sales Analyst @ Maxitech Pharma</span>
                 </div>
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Academic Credential</span>
-                  <span className="font-semibold text-white text-right">BS Computer Science (SMIU)</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Academic Credential</span>
+                  <span className="font-semibold text-slate-900 dark:text-white text-right">BS Computer Science (SMIU)</span>
                 </div>
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Primary Core BI Stack</span>
-                  <span className="font-semibold text-orange-300 text-right">Power BI, Advanced Excel, SQL, DAX</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Primary Core BI Stack</span>
+                  <span className="font-semibold text-orange-600 dark:text-orange-300 text-right">Power BI, Advanced Excel, SQL, DAX</span>
                 </div>
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Programming &amp; ML</span>
-                  <span className="font-semibold text-amber-300 text-right">Python, Pandas, scikit-learn, Streamlit</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Programming &amp; ML</span>
+                  <span className="font-semibold text-amber-600 dark:text-amber-300 text-right">Python, Pandas, scikit-learn, Streamlit</span>
                 </div>
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Key Certifications</span>
-                  <span className="font-semibold text-emerald-300 text-right">Google DA, Microsoft PL-300, Excel Associate</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Key Certifications</span>
+                  <span className="font-semibold text-emerald-600 dark:text-emerald-300 text-right">Google DA, Microsoft PL-300, Excel Associate</span>
                 </div>
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Work Authorization</span>
-                  <span className="font-semibold text-white text-right">Karachi &amp; Remote Worldwide</span>
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-200/80 dark:border-white/5">
+                  <span className="text-slate-600 dark:text-slate-400">Work Authorization</span>
+                  <span className="font-semibold text-slate-900 dark:text-white text-right">Karachi &amp; Remote Worldwide</span>
                 </div>
               </div>
 
               {/* Verified Competency Checkmarks */}
               <div className="space-y-2 pt-2">
-                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block">
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-300 uppercase tracking-wider block">
                   Core Competencies:
                 </span>
                 {[
@@ -202,8 +202,8 @@ export default function About() {
                   'SQL data cleaning, CTEs, and window functions',
                   'Machine learning churn prediction & RFM segmentation'
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-400 mt-0.5 shrink-0" />
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400 mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}

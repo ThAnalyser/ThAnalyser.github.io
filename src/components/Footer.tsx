@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/10 bg-slate-950/80 pt-16 pb-12 text-slate-400 text-xs">
+    <footer className="relative border-t border-slate-200 dark:border-white/10 bg-slate-100/80 dark:bg-slate-950/80 pt-16 pb-12 text-slate-600 dark:text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Top Footer Grid */}
@@ -44,11 +44,11 @@ export default function Footer() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <span className="font-bold text-white text-base">
+              <span className="font-bold text-slate-900 dark:text-white text-base">
                 {PERSONAL_INFO.name}
               </span>
             </div>
-            <p className="text-slate-400 max-w-md leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
               Sales &amp; Data Analyst specializing in Power BI, Advanced Excel, SQL, and Python. Turning complex multi-source sales telemetry into clear, executive-grade decision intelligence.
             </p>
             <div className="flex items-center gap-3 pt-2">
@@ -57,7 +57,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-orange-400 transition-all"
+                className="p-2 rounded-lg glass-panel text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-all shadow-sm"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -66,14 +66,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-orange-400 transition-all"
+                className="p-2 rounded-lg glass-panel text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-all shadow-sm"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
                 aria-label="Email"
-                className="p-2 rounded-lg glass-panel text-slate-400 hover:text-emerald-400 transition-all"
+                className="p-2 rounded-lg glass-panel text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-sm"
               >
                 <Mail className="w-4 h-4" />
               </a>
@@ -82,46 +82,46 @@ export default function Footer() {
 
           {/* Quick Navigation Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Navigation
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="hover:text-orange-400 transition-colors">About Me</a>
+                <a href="#about" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">About Me</a>
               </li>
               <li>
-                <a href="#experience" className="hover:text-orange-400 transition-colors">Professional Experience</a>
+                <a href="#experience" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Professional Experience</a>
               </li>
               <li>
-                <a href="#skills" className="hover:text-orange-400 transition-colors">Technical Skills</a>
+                <a href="#skills" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Technical Skills</a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-orange-400 transition-colors">Featured Projects</a>
+                <a href="#projects" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Featured Projects</a>
               </li>
               <li>
-                <a href="#ai-lab" className="hover:text-orange-400 transition-colors">AI &amp; ML Lab ⚡</a>
+                <a href="#ai-lab" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">AI &amp; ML Lab ⚡</a>
               </li>
               <li>
-                <a href="#showcase" className="hover:text-orange-400 transition-colors">Interactive Dashboard</a>
+                <a href="#showcase" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Interactive Dashboard</a>
               </li>
               <li>
-                <a href="#certifications" className="hover:text-orange-400 transition-colors">Certifications &amp; Degree</a>
+                <a href="#certifications" className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Certifications &amp; Degree</a>
               </li>
             </ul>
           </div>
 
           {/* Quick Actions & Resume */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Verified Documents
             </h4>
             <div className="space-y-2">
               <a
                 href="/Hanzala_Raja_Resume.pdf"
                 download="Hanzala_Raja_Resume.pdf"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 border border-white/10 hover:border-orange-500/40 transition-all"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-900 border border-slate-300 dark:border-white/10 hover:border-orange-500/40 transition-all shadow-sm"
               >
-                <Download className="w-3.5 h-3.5 text-orange-400" />
+                <Download className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
                 <span>Download Resume (PDF)</span>
               </a>
               <p className="text-[11px] text-slate-500">
@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div className="pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
             © 2026 {PERSONAL_INFO.name}. All verified rights reserved.
           </div>

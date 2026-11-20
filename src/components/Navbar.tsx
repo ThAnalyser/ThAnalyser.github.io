@@ -61,7 +61,7 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'glass-panel shadow-lg shadow-black/40 py-3 bg-[#08090f]/90' 
+          ? 'glass-panel shadow-md shadow-slate-900/5 dark:shadow-black/40 py-3 bg-white/95 dark:bg-[#08090f]/90 border-b border-slate-200 dark:border-white/10' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -74,7 +74,7 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-lg p-1"
           >
             <div className="w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-orange-500 to-amber-600 p-[1.5px] shadow-lg shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-all">
-              <div className="w-full h-full bg-[#0a0b12] rounded-[10px] overflow-hidden flex items-center justify-center relative">
+              <div className="w-full h-full bg-slate-100 dark:bg-[#0a0b12] rounded-[10px] overflow-hidden flex items-center justify-center relative">
                 <img
                   src="/assets/hanzala_portrait.jpg"
                   alt="Hanzala Raja"
@@ -83,11 +83,11 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-base tracking-tight text-white group-hover:text-orange-400 transition-colors flex items-center gap-1.5">
+              <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center gap-1.5">
                 {PERSONAL_INFO.name}
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
               </span>
-              <span className="text-xs text-slate-400 font-medium tracking-wide">
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium tracking-wide">
                 Sales &amp; Data Analyst
               </span>
             </div>
@@ -103,8 +103,8 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
                   href={link.href}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     isActive
-                      ? 'text-orange-400 bg-orange-500/10 border border-orange-500/30'
-                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      ? 'text-orange-600 dark:text-orange-400 bg-orange-500/10 border border-orange-500/30'
+                      : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                   }`}
                 >
                   {link.name}
@@ -119,9 +119,9 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
             {onOpenAiCopilot && (
               <button
                 onClick={onOpenAiCopilot}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-orange-300 bg-orange-500/15 border border-orange-500/40 hover:bg-orange-500/25 transition-all shadow-sm shadow-orange-500/10 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-orange-700 dark:text-orange-300 bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 dark:border-orange-500/40 hover:bg-orange-500/20 transition-all shadow-sm shadow-orange-500/10 cursor-pointer"
               >
-                <Bot className="w-3.5 h-3.5 text-orange-400" />
+                <Bot className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
                 <span>Ask AI</span>
               </button>
             )}
@@ -130,12 +130,12 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="p-2 rounded-xl glass-panel text-slate-300 hover:text-white hover:border-orange-500/40 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="p-2 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-orange-500/40 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               {theme === 'dark' ? (
                 <Sun className="w-4 h-4 text-amber-400" />
               ) : (
-                <Moon className="w-4 h-4 text-orange-500" />
+                <Moon className="w-4 h-4 text-orange-600" />
               )}
             </button>
 
@@ -155,7 +155,7 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
             {onOpenAiCopilot && (
               <button
                 onClick={onOpenAiCopilot}
-                className="p-2 rounded-xl bg-orange-500/15 border border-orange-500/30 text-orange-400 transition-all"
+                className="p-2 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-600 dark:text-orange-400 transition-all"
                 aria-label="Open AI Copilot"
               >
                 <Bot className="w-4 h-4" />
@@ -164,18 +164,18 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="p-2 rounded-xl glass-panel text-slate-300 hover:text-white transition-all"
+              className="p-2 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all"
             >
               {theme === 'dark' ? (
                 <Sun className="w-4 h-4 text-amber-400" />
               ) : (
-                <Moon className="w-4 h-4 text-orange-500" />
+                <Moon className="w-4 h-4 text-orange-600" />
               )}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Open navigation menu"
-              className="p-2 rounded-xl glass-panel text-slate-300 hover:text-white transition-all"
+              className="p-2 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -186,26 +186,26 @@ export default function Navbar({ onOpenAiCopilot }: { onOpenAiCopilot?: () => vo
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-panel border-b border-white/10 px-4 pt-3 pb-6 mt-3 space-y-2 bg-[#090a12]/95 backdrop-blur-xl animate-fadeIn">
+        <div className="lg:hidden glass-panel border-b border-slate-200 dark:border-white/10 px-4 pt-3 pb-6 mt-3 space-y-2 bg-white/95 dark:bg-[#090a12]/95 backdrop-blur-xl animate-fadeIn">
           {NAV_LINKS.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:text-orange-400 hover:bg-white/5 transition-all"
+              className="flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-all"
             >
               <span>{link.name}</span>
-              <ChevronRight className="w-4 h-4 text-slate-500" />
+              <ChevronRight className="w-4 h-4 text-slate-400 dark:text-slate-500" />
             </a>
           ))}
-          <div className="pt-2 border-t border-white/10 space-y-2">
+          <div className="pt-2 border-t border-slate-200 dark:border-white/10 space-y-2">
             {onOpenAiCopilot && (
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenAiCopilot();
                 }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-orange-300 bg-orange-500/20 border border-orange-500/40"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-orange-700 dark:text-orange-300 bg-orange-500/10 dark:bg-orange-500/20 border border-orange-500/30 dark:border-orange-500/40"
               >
                 <Bot className="w-4 h-4" />
                 <span>Ask AI Copilot ⚡</span>

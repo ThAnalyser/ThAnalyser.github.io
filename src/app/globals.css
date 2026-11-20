@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --bg-primary: #07080b;
@@ -17,18 +19,18 @@
   }
 
   .light {
-    --bg-primary: #fafafc;
-    --bg-secondary: #f2f3f7;
-    --bg-card: rgba(255, 255, 255, 0.95);
-    --border-card: rgba(15, 23, 42, 0.1);
-    --text-primary: #0a0b0e;
-    --text-secondary: #4b5262;
-    --text-muted: #8b92a4;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-card: rgba(15, 23, 42, 0.12);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
     --accent-orange: #ea580c;
     --accent-orange-hover: #f97316;
     --accent-amber: #d97706;
     --accent-emerald: #059669;
-    --accent-glow: rgba(234, 88, 12, 0.15);
+    --accent-glow: rgba(234, 88, 12, 0.12);
   }
 }
 
@@ -42,7 +44,7 @@ body {
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Custom scrollbar */
@@ -50,17 +52,14 @@ body {
   width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #07080b;
-}
-.light ::-webkit-scrollbar-track {
-  background: #f2f3f7;
+  background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f222e;
+  background: #334155;
   border-radius: 4px;
 }
 .light ::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #cbd5e1;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #ff6b00;
@@ -75,17 +74,23 @@ body {
 }
 .light .tech-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
 }
 
 /* Radial Glows */
 .radial-glow-orange {
   background: radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.16), transparent 70%);
 }
+.light .radial-glow-orange {
+  background: radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.08), transparent 70%);
+}
 
 .radial-glow-amber {
   background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.12), transparent 70%);
+}
+.light .radial-glow-amber {
+  background: radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.06), transparent 70%);
 }
 
 /* Glassmorphism surfaces */
@@ -96,13 +101,21 @@ body {
   border: 1px solid var(--border-card);
 }
 
+.light .glass-panel {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+}
+
 .glass-panel-hover {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-panel-hover:hover {
-  border-color: rgba(255, 107, 0, 0.35);
+  border-color: rgba(255, 107, 0, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 16px 36px -12px rgba(255, 107, 0, 0.16);
+  box-shadow: 0 16px 36px -12px rgba(255, 107, 0, 0.18);
+}
+.light .glass-panel-hover:hover {
+  border-color: rgba(234, 88, 12, 0.5);
+  box-shadow: 0 16px 36px -12px rgba(234, 88, 12, 0.15);
 }
 
 /* Gradient text helpers */
@@ -111,26 +124,37 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.text-gradient-white {
-  background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.light .text-gradient-white {
-  background: linear-gradient(180deg, #0a0b0e 0%, #374151 100%);
+.light .text-gradient-orange {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 50%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 3D Wireframe Spin Animation */
-@keyframes wireframeSpin {
-  0% { transform: rotateX(0deg) rotateY(0deg); }
-  50% { transform: rotateX(180deg) rotateY(180deg); }
-  100% { transform: rotateX(360deg) rotateY(360deg); }
+/* Standard Heading & Text Colors across Light & Dark */
+.heading-primary {
+  color: #fcfcfd;
+}
+.light .heading-primary {
+  color: #0f172a;
 }
 
-.animate-wireframe {
-  animation: wireframeSpin 20s linear infinite;
-  transform-style: preserve-3d;
+.text-body {
+  color: #cbd5e1;
+}
+.light .text-body {
+  color: #334155;
+}
+
+.text-subtle {
+  color: #94a3b8;
+}
+.light .text-subtle {
+  color: #64748b;
+}
+
+.card-inner-bg {
+  background-color: rgba(15, 23, 42, 0.6);
+}
+.light .card-inner-bg {
+  background-color: #f1f5f9;
 }
