@@ -11,7 +11,8 @@ import {
   FileCode, 
   TrendingUp, 
   AlertCircle,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Printer
 } from 'lucide-react';
 import { GithubIcon } from '@/components/SocialIcons';
 import { Project } from '@/data/portfolioData';
@@ -44,13 +45,24 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </h3>
           </div>
 
-          <button
-            onClick={onClose}
-            aria-label="Close modal"
-            className="p-2 rounded-xl glass-panel text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-orange-500/40 transition-all cursor-pointer"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => window.print()}
+              title="Print / Save as PDF"
+              className="p-2 rounded-xl glass-panel text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-orange-500/40 transition-all cursor-pointer hidden sm:flex items-center gap-1.5 text-xs font-semibold"
+            >
+              <Printer className="w-4 h-4 text-orange-500" />
+              <span>Print Dossier</span>
+            </button>
+
+            <button
+              onClick={onClose}
+              aria-label="Close modal"
+              className="p-2 rounded-xl glass-panel text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-orange-500/40 transition-all cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Modal Body */}
